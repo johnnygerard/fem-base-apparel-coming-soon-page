@@ -1,3 +1,7 @@
 @use 'reset';
 @use 'fonts';
 @use 'index' as *;
+
+body {
+  background: linear-gradient(150deg, #FFF, #FFF4F4 84%);
+}

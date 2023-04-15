@@ -1,0 +1,10 @@
+@use 'index' as *;
+
+:host {
+  display: block;
+  padding-top: 32rem;
+
+  @include desktop {
+    padding: 76rem 0 0 164rem;
+  }
+}

@@ -1,0 +1,19 @@
+@use 'index' as *;
+
+:host {
+  display: block;
+
+  @include mobile {
+    margin-left: 32rem;
+  }
+}
+
+svg {
+  height: 20rem;
+  width: 100rem;
+
+  @include desktop {
+    height: 32rem;
+    width: 160rem;
+  }
+}

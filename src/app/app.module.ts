@@ -15,7 +15,7 @@ import { NgOptimizedImage, provideImageKitLoader } from '@angular/common';
     NgOptimizedImage
   ],
   providers: [
-    provideImageKitLoader('https://ik.imagekit.io/jgerard')
+    provideImageKitLoader('https://ik.imagekit.io/jgerard/fem-base-apparel-coming-soon-page')
   ],
   bootstrap: [AppComponent]
 })

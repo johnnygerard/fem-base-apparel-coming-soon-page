@@ -1,0 +1,9 @@
+@use 'index' as *;
+
+.hero {
+  @include mobile {
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+  }
+}

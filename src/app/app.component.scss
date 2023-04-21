@@ -2,9 +2,13 @@
 
 :host {
   display: block;
-  padding-top: 32rem;
+  min-height: 100vh;
+
+  @include mobile {
+    padding-top: 32px;
+  }
 
   @include desktop {
-    padding: 76rem 0 0 164rem;
+    display: grid;
   }
 }

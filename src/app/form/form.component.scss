@@ -58,6 +58,8 @@ button {
 }
 
 button {
+  $gradient: linear-gradient(135deg, #F8BFBF, #EE8B8B);
+
   background: $gradient;
   box-shadow: 0 15px 20px rgba(198, 110, 110, .25);
   width: 64px;
@@ -71,7 +73,7 @@ button {
   }
 
   &:is(:hover, :focus) {
-    // Apply semi-transparent white background
+    // Add semi-transparent white layer
     background: linear-gradient(#FFFFFF80, #FFFFFF80), $gradient;
   }
 }

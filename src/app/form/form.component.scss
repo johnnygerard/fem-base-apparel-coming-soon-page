@@ -1,0 +1,89 @@
+@use 'index' as *;
+
+form {
+  @include mobile {
+    text-align: center;
+    margin: 64px 32px 0;
+  }
+
+  font-family: 'Josefin Sans',
+  sans-serif;
+  color: map-get($palette, text);
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 40rem;
+  line-height: 42rem;
+  letter-spacing: 10.8rem;
+  color: map-get($palette, black);
+
+  &-head {
+    font-weight: 300;
+    color: map-get($palette, text);
+  }
+}
+
+.body {
+  margin-top: 16rem;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 22rem;
+}
+
+[type=email],
+button {
+  height: 48rem;
+}
+
+[type=email] {
+  border-radius: 28px;
+  border: 1px solid map-get($palette, light-text);
+  width: 100%; // Prevent overflow
+
+  // Typography
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 28rem;
+
+  padding: 0 88px 0 24px;
+
+  // reset default styles
+  background: none;
+
+  &::placeholder {
+    color: map-get($palette, light-text);
+  }
+}
+
+button {
+  background: $gradient;
+  box-shadow: 0 15px 20px rgba(198, 110, 110, .25);
+  width: 64px;
+  display: inline-grid; // center svg
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+
+  border: none {
+    radius: 28px;
+  }
+
+  &:is(:hover, :focus) {
+    // Apply semi-transparent white background
+    background: linear-gradient(#FFFFFF80, #FFFFFF80), $gradient;
+  }
+}
+
+.input-box {
+  margin-top: 32px;
+  position: relative;
+  display: inline-flex;
+}
+
+svg {
+  margin: auto; // center svg
+  width: 12px;
+  height: 20px;
+}

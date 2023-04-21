@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { SvgLogoComponent } from './svg-logo/svg-logo.component';
 import { NgOptimizedImage, provideImageKitLoader } from '@angular/common';
 import { HeroComponent } from './hero/hero.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SvgLogoComponent,
-    HeroComponent
+    HeroComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

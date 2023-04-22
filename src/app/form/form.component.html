@@ -1,4 +1,4 @@
-<form>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <h1 class="title">
     <span class="title-head">we're</span><br>coming<br>soon
   </h1>
@@ -7,11 +7,14 @@
     Add your email below to stay up-to-date with announcements and our launch deals.
   </p>
   <div class="input-box">
-    <input type="email" placeholder="Email Address">
-    <button>
+    <input type="email" name="email" #email="ngModel" email ngModel required spellcheck="false"
+        placeholder="Email Address">
+    <svg-error *ngIf="email.errors?.['email']"></svg-error>
+    <button [disabled]="email.errors">
       <svg viewBox="0 0 12 20" fill="none">
         <path d="M1 1L9.83566 9.83566L1 18.6713" stroke="white" stroke-width="2" />
       </svg>
     </button>
+    <p class="error" *ngIf="email.errors?.['email']">Please provide a valid email</p>
   </div>
 </form>

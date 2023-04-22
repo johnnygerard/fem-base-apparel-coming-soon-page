@@ -1,9 +1,12 @@
 @use 'index' as *;
 
 form {
+  max-width: 444px;
+
   @include mobile {
     text-align: center;
-    margin: 64px 32px 0;
+    margin: 64px auto 0;
+    padding: 0 32px;
   }
 
   font-family: 'Josefin Sans',
@@ -14,58 +17,110 @@ form {
 .title {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 40rem;
-  line-height: 42rem;
-  letter-spacing: 10.8rem;
   color: map-get($palette, black);
+
+  @include mobile {
+    font-size: 40rem;
+    line-height: 42rem;
+    letter-spacing: 10.8rem;
+  }
+
+  @include desktop {
+    font-size: 64rem;
+    line-height: 71rem;
+    letter-spacing: 17.3rem;
+  }
 
   &-head {
     font-weight: 300;
     color: map-get($palette, text);
+
+    @include desktop {
+      font-size: 64rem;
+      line-height: 64rem;
+    }
   }
 }
 
 .body {
-  margin-top: 16rem;
   font-weight: 400;
-  font-size: 14rem;
-  line-height: 22rem;
+
+  @include mobile {
+    margin-top: 16rem;
+    font-size: 14rem;
+    line-height: 22rem;
+  }
+
+  @include desktop {
+    margin-top: 32rem;
+    font-size: 16rem;
+    line-height: 28rem;
+  }
 }
 
-[type=email],
-button {
-  height: 48rem;
+.input-box {
+  border-radius: 28px;
+  border: 1px solid map-get($palette, light-text);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    margin-top: 32rem;
+    height: 48rem;
+  }
+
+  @include desktop {
+    margin-top: 40rem;
+    height: 56rem;
+  }
 }
 
 [type=email] {
-  border-radius: 28px;
-  border: 1px solid map-get($palette, light-text);
   width: 100%; // Prevent overflow
+
+  @include mobile {
+    margin: 0 24px;
+  }
+
+  @include desktop {
+    margin: 0 32px;
+  }
 
   // Typography
   font-weight: 400;
-  font-size: 14rem;
-  line-height: 28rem;
 
-  padding: 0 88px 0 24px;
+  @include mobile {
+    font-size: 14rem;
+    line-height: 28rem;
+  }
+
+  @include desktop {
+    font-size: 16rem;
+    line-height: 28rem;
+  }
 
   // reset default styles
   background: none;
+  border: none;
+  padding: 0;
 
   &::placeholder {
     color: map-get($palette, light-text);
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 }
 
 button {
   $gradient: linear-gradient(135deg, #F8BFBF, #EE8B8B);
-
   background: $gradient;
   box-shadow: 0 15px 20px rgba(198, 110, 110, .25);
-  width: 64px;
+  height: 100%;
   display: inline-grid; // center svg
-  position: absolute;
-  right: 0;
   cursor: pointer;
 
   border: none {
@@ -76,12 +131,48 @@ button {
     // Add semi-transparent white layer
     background: linear-gradient(#FFFFFF80, #FFFFFF80), $gradient;
   }
+
+  @include mobile {
+    min-width: 64px;
+  }
+
+  @include desktop {
+    min-width: 100px;
+  }
+
+  // Reset default styles
+  padding: 0;
 }
 
-.input-box {
-  margin-top: 32px;
-  position: relative;
-  display: inline-flex;
+.error {
+  position: absolute;
+  left: 24px;
+
+  @include mobile {
+    top: 56px;
+  }
+
+  @include desktop {
+    top: 70px;
+  }
+
+  font-weight: 400;
+  font-size: 13rem;
+  line-height: 13rem;
+  color: map-get($palette, error);
+}
+
+svg-error {
+  min-width: 24px;
+  min-height: 24px;
+
+  @include mobile {
+    margin-right: 8px;
+  }
+
+  @include desktop {
+    margin-right: 16px;
+  }
 }
 
 svg {

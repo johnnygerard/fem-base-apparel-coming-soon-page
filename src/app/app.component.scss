@@ -3,6 +3,7 @@
 :host {
   display: block;
   min-height: 100vh;
+  min-width: 320px;
 
   @include mobile {
     padding-top: 32px;

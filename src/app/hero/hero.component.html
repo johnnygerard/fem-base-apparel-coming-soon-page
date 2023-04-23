@@ -1,6 +1,8 @@
 <picture>
-  <source media="(min-width: 768px)" [srcset]="getSrcSet('hero-desktop.png')" sizes="" width="610"
-      height="800">
-  <img class="hero" ngSrc="hero-mobile.png" sizes="" width="375" height="250" priority
-      alt="Beautiful woman wearing a sunset apricot shirt and a golden bracelet.">
+    <source media="(min-width: 893px)" width="610" height="800"
+        srcset="{{ikBaseURL}}/hero-610x800.png">
+    <source media="(min-width: 768px)" width="305" height="800"
+        srcset="{{ikBaseURL}}/tr:w-305,h-800,cm-extract/hero-610x800.png">
+    <img class="hero" ngSrc="hero-375x250.png" ngSrcset="1x" width="375" height="250" priority
+        alt="Beautiful woman wearing a sunset apricot shirt and a golden bracelet.">
 </picture>

@@ -4,7 +4,9 @@
   display: block;
 
   @include mobile {
-    margin-left: 32px;
+    $margin: 32px;
+
+    margin-left: max((100% - 375px) / 2 + $margin, $margin);
   }
 }
 

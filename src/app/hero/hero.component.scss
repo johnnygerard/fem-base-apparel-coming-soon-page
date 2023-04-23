@@ -3,8 +3,9 @@
 .hero {
   @include mobile {
     width: 100%;
+    max-width: 375px;
     height: auto;
-    margin-top: 32px;
+    margin: 32px auto 0;
   }
 
   @include desktop {

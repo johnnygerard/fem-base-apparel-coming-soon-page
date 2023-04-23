@@ -2,14 +2,29 @@
 
 :host {
   display: block;
-  min-height: 100vh;
   min-width: 320px;
 
   @include mobile {
-    padding-top: 32px;
+    padding: 32px 0 92px;
   }
 
   @include desktop {
+    $column-gap: 11.4vw;
+
+    margin: auto 0;
+    padding-left: $column-gap;
     display: grid;
+    grid-template: auto 1fr / 1fr auto;
+    gap: 17vh $column-gap;
+  }
+}
+
+@include desktop {
+  app-hero {
+    grid-row: span 2;
+  }
+
+  svg-logo {
+    margin-top: 64px;
   }
 }

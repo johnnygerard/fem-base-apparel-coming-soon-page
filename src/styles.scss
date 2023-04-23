@@ -4,4 +4,8 @@
 
 body {
   background: linear-gradient(150deg, #FFF, #FFF4F4 84%);
+
+  @include desktop {
+    display: grid;
+  }
 }

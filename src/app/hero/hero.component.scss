@@ -6,4 +6,10 @@
     height: auto;
     margin-top: 32px;
   }
+
+  @include desktop {
+    min-height: 800px;
+    max-height: 100vh;
+    object-fit: cover;
+  }
 }

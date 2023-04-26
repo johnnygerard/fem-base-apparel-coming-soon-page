@@ -16,6 +16,7 @@
     display: grid;
     grid-template: auto 1fr / 1fr auto;
     gap: 17vh $column-gap;
+    background: url($svg-background) no-repeat top left;
   }
 }
 
